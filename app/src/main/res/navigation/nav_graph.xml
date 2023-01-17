@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_first">
+
+    <fragment
+        android:id="@+id/fragment_first"
+        android:name="com.coolhabit.textfieldgencompose.textField.first.FirstTextFieldFragment">
+        <action
+            android:id="@+id/open_second"
+            app:destination="@id/fragment_second" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_second"
+        android:name="com.coolhabit.textfieldgencompose.textField.second.SecondTextFieldFragment">
+        <action
+            android:id="@+id/open_third"
+            app:destination="@id/fragment_third" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_third"
+        android:name="com.coolhabit.textfieldgencompose.textField.third.ThirdTextFieldFragment">
+        <action
+            android:id="@+id/calculate_finish"
+            app:destination="@id/fragment_finish" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_finish"
+        android:name="com.coolhabit.textfieldgencompose.textField.finish.FinishFragment">
+        <action
+            android:id="@+id/start_again"
+            app:destination="@id/fragment_first" />
+    </fragment>
+</navigation>

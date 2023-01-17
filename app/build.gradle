@@ -1,0 +1,142 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'kotlinx-serialization'
+    id "androidx.navigation.safeargs.kotlin"
+    id 'dagger.hilt.android.plugin'
+}
+
+apply from: '../dependencies.gradle'
+
+android {
+    namespace 'com.coolhabit.textfieldgencompose'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.coolhabit.textfieldgencompose"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.usesCleartextTraffic = false
+            buildConfigField "String", "BASE_URL", '"https://v6.develop.maddcog.io/"'
+        }
+        debug {
+            manifestPlaceholders.usesCleartextTraffic = true
+            buildConfigField "String", "BASE_URL", '"https://v6.develop.maddcog.io/"'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(11))
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+        freeCompilerArgs += ["-Xopt-in=kotlin.RequiresOptIn"]
+    }
+    buildFeatures {
+        compose true
+        viewBinding true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_compiler_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    coreLibraryDesugaring desugar_jdk_libs
+
+    implementation android_core
+    implementation lifecycle_viewmodel
+    implementation google_gson
+
+    // Android
+    implementation appcompat
+    implementation constraintlayout
+    implementation activity_ktx
+    implementation fragment_ktx
+    implementation legacy_support
+    implementation material
+    implementation  activity_compose
+
+    implementation compose_ui
+    implementation compose_material
+    implementation compose_tooling_preview
+    implementation lifecycle_viewmodel_compose
+    implementation livedata
+    implementation compose_3
+    implementation compose_material_window_size
+    implementation compose_coil
+    implementation  accompanist_placeholder
+    implementation compose_ui_utils
+    implementation compose_foundation
+    implementation compose_animation
+    implementation compose_animation_core
+    implementation compose_compiler
+    implementation compose_runtime
+    implementation compose_ui_tooling
+    implementation flow_row
+    implementation compose_icons
+
+    implementation constraintlayout_compose
+
+    implementation navigation_compose
+
+    // Android Navigation
+    implementation navigation_fragment_ktx
+    implementation navigation_ui_ktx
+
+    implementation androidx_lifecycle
+    implementation androidx_lifecycle_livedata
+    implementation androidx_lifecycle_tuntime
+    implementation androidx_lifecycle_common
+    implementation androidx_lifecycle_ext
+
+    //Dagger Hilt
+    kapt hilt_compiler
+    implementation hilt
+    implementation hilt_work
+
+    implementation accompanist_systemuicontroller
+
+    // Glide
+    implementation bumptech_glide
+    kapt bumptech_glide_version_compiler
+    implementation bumptech_glide_okhttp
+
+    //JSON
+    implementation serialization
+
+    implementation work
+
+    testImplementation junit
+    androidTestImplementation android_x_test_junit
+    androidTestImplementation espresso_core
+    androidTestImplementation compose_ui_test
+}

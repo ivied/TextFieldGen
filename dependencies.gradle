@@ -1,0 +1,109 @@
+ext {
+    def nav_version = "2.5.3"
+    def android_core_version = "1.9.0"
+    def lifecycle_viewmodel_version = "2.5.1"
+    def google_gson_version = "2.9.0"
+    def appcompat_version = "1.6.0-beta01"
+    def constraintlayout_version = "2.1.4"
+    def activity_version = "1.6.1"
+    def fragment_version = "1.5.4"
+    def legace_version = "1.0.0"
+    def material_version = "1.7.0"
+    def activity_compose_version = "1.6.1"
+    def compose_ui_version = "1.4.0-alpha02"
+    def lifecycle_viewmodel_compose_version = "2.5.1"
+    def compose_3_version = "1.1.0-alpha02"
+    def compose_material_window_size_version = "1.1.0-alpha02"
+    def compose_coil_version = "2.1.0"
+    def accompanist_placeholder_version = "1.3.2"
+    def constraintlayout_compose_version = "1.0.1"
+    def navigation_compose_version = "2.5.3"
+    def lifecycle_version = "2.5.1"
+    def lifecycle_ext_version = "2.2.0"
+    def hilt_work_version = "1.0.0"
+    def accompanist_systemuicontroller_version = "0.23.1"
+    def bumptech_glide_version = "4.13.2"
+    def desugar_jdk_libs_version = "1.1.5"
+    def work_version = "2.7.1"
+    def junit_version = "4.13.2"
+    def android_x_test_junit_version = "1.1.4"
+    def espresso_core_version = "3.5.0"
+    def serialization_version = "1.2.1"
+    def google_accompanist = "0.28.0"
+
+    //android navigation
+    navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    android_core = "androidx.core:core-ktx:$android_core_version"
+    lifecycle_viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_viewmodel_version"
+    google_gson = "com.google.code.gson:gson:$google_gson_version"
+
+    // Android
+    appcompat = "androidx.appcompat:appcompat:$appcompat_version"
+    constraintlayout = "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    activity_ktx = "androidx.activity:activity-ktx:$activity_version"
+    fragment_ktx = "androidx.fragment:fragment-ktx:$fragment_version"
+    legacy_support = "androidx.legacy:legacy-support-v4:$legace_version"
+    material = "com.google.android.material:material:$material_version"
+    activity_compose = "androidx.activity:activity-compose:$activity_compose_version"
+
+    //serialization
+    serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version"
+
+    //Compose
+    compose_ui = "androidx.compose.ui:ui:$compose_ui_version"
+    compose_material = "androidx.compose.material:material:$compose_version"
+    compose_tooling_preview = "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    lifecycle_viewmodel_compose = "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_viewmodel_compose_version"
+    livedata = "androidx.compose.runtime:runtime-livedata:$compose_version"
+    compose_3 = "androidx.compose.material3:material3:$compose_3_version"
+    compose_material_window_size = "androidx.compose.material3:material3-window-size-class:$compose_material_window_size_version"
+    compose_coil = "io.coil-kt:coil-compose:$compose_coil_version"
+    accompanist_placeholder = "com.google.accompanist:accompanist-placeholder-material:0.25.1"
+    compose_ui_utils = "androidx.compose.ui:ui-util:$compose_version"
+    compose_foundation = "androidx.compose.foundation:foundation:$compose_version"
+    compose_animation = "androidx.compose.animation:animation:$compose_version"
+    compose_animation_core = "androidx.compose.animation:animation-core:$compose_version"
+    compose_compiler = "androidx.compose.compiler:compiler:$accompanist_placeholder_version"
+    compose_runtime = "androidx.compose.runtime:runtime:$compose_version"
+    compose_ui_tooling = "androidx.compose.ui:ui-tooling:$compose_version"
+    flow_row = "com.google.accompanist:accompanist-flowlayout:$google_accompanist"
+    compose_icons = "androidx.compose.material:material-icons-extended:$compose_version"
+
+    // Constraint Compose
+    constraintlayout_compose = "androidx.constraintlayout:constraintlayout-compose:$constraintlayout_compose_version"
+
+    //  Navigation Compose
+    navigation_compose = "androidx.navigation:navigation-compose:$navigation_compose_version"
+
+    // Lifecycle
+    androidx_lifecycle = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    androidx_lifecycle_livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    androidx_lifecycle_tuntime = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    androidx_lifecycle_common = "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    androidx_lifecycle_ext = "androidx.lifecycle:lifecycle-extensions:$lifecycle_ext_version"
+
+// Hilt
+    hilt = "com.google.dagger:hilt-android:$hilt_version"
+    hilt_compiler = "com.google.dagger:hilt-compiler:$hilt_version"
+    hilt_work = "androidx.hilt:hilt-work:$hilt_work_version"
+
+    accompanist_systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:$accompanist_systemuicontroller_version"
+
+
+//    Glide
+    bumptech_glide = "com.github.bumptech.glide:glide:$bumptech_glide_version"
+    bumptech_glide_version_compiler = "com.github.bumptech.glide:compiler:$bumptech_glide_version"
+    bumptech_glide_okhttp = "com.github.bumptech.glide:okhttp3-integration:$bumptech_glide_version"
+
+    desugar_jdk_libs = "com.android.tools:desugar_jdk_libs:$desugar_jdk_libs_version"
+
+    //    Google
+    work = "androidx.work:work-runtime-ktx:$work_version"
+
+    junit = "junit:junit:$junit_version"
+    android_x_test_junit = "androidx.test.ext:junit:$android_x_test_junit_version"
+    espresso_core = "androidx.test.espresso:espresso-core:$espresso_core_version"
+    compose_ui_test = "androidx.compose.ui:ui-test-junit4:$compose_version"
+}
